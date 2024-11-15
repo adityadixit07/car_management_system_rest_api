@@ -11,12 +11,14 @@ const PORT = process.env.PORT || 5001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(
-  cors({
-    origin: "*",
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin: "*",
+  credentials: true,
+  accessControlAllowOrigin: "*",
+  methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+};
+app.use(cors(corsOptions));
+
 app.use(morgan("dev"));
 
 dbConnect();

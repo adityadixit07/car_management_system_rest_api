@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://car-management-system-rest-api.onrender.com/api/1",
+  //   baseURL: "https://car-management-system-rest-api.onrender.com/api/1",
+  baseURL: "http://localhost:5000/api/1",
   withCredentials: true,
 });
 axiosInstance.interceptors.request.use(
