@@ -1,0 +1,41 @@
+// Auth Routes
+POST /api/register - Register new user
+POST /api/login - Login user
+
+// Car Routes (all protected)
+POST /api/cars - Create new car
+GET /api/cars - Get all cars for user
+GET /api/cars/search?query=keyword - Search cars
+GET /api/cars/:id - Get single car
+PUT /api/cars/:id - Update car
+DELETE /api/cars/:id - Delete car
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+src/
+  components/
+    Auth/
+      Login.js
+      Register.js
+    Car/
+      CreateCar.js
+      CarList.js
+      CarDetails.js
+      EditCar.js
+    Layout/
+      Navbar.js
+    Search/
+      SearchCar.js
+  App.js
+  axios.js
